@@ -1,7 +1,7 @@
 {
   "name": "agentic-listen",
   "version": "0.1.1",
-  "description": "Turn live streams and call recording URLs into text with Deepgram or OpenAI.",
+  "description": "Preview audio URL transcription and call Deepgram from a TypeScript SDK, CLI, or MCP server; includes an incomplete OpenAI adapter.",
   "license": "MIT",
   "author": "Pooria Arab",
   "repository": {
@@ -50,11 +50,14 @@
   "keywords": [
     "deepgram",
     "openai",
-    "live-stream",
-    "call-recording",
+    "audio-transcription",
     "speech-to-text",
+    "recording-url",
+    "call-recording",
+    "typescript",
+    "nodejs",
     "cli",
     "mcp",
-    "agent"
+    "dry-run"
   ]
 }
