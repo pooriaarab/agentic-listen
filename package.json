@@ -1,6 +1,6 @@
 {
   "name": "agentic-listen",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Preview audio URL transcription and call Deepgram from a TypeScript SDK, CLI, or MCP server; includes an incomplete OpenAI adapter.",
   "license": "MIT",
   "author": "Pooria Arab",
@@ -49,7 +49,6 @@
   },
   "keywords": [
     "deepgram",
-    "openai",
     "audio-transcription",
     "speech-to-text",
     "recording-url",
