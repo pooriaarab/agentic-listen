@@ -1,22 +1,22 @@
 {
-  "name": "@pooriaarab/agentic-scaffold",
+  "name": "agentic-listen",
   "version": "0.1.0",
-  "description": "Canonical scaffold for a CLI plus library plus MCP server pack.",
+  "description": "Return speech text from live audio streams and call recording URLs.",
   "keywords": [
-    "cli",
-    "mcp",
-    "scaffold",
-    "starter",
-    "typescript"
+    "audio",
+    "speech",
+    "transcription",
+    "deepgram",
+    "openai",
+    "mcp"
   ],
   "license": "MIT",
   "author": "Pooria Arab",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pooriaarab/agentic-scaffold.git"
+    "url": "https://github.com/pooriaarab/agentic-listen.git"
   },
   "type": "module",
-  "private": true,
   "engines": {
     "node": ">=18"
   },
@@ -26,7 +26,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "mcpName": "io.github.pooriaarab/agentic-scaffold",
+  "mcpName": "io.github.pooriaarab/agentic-listen",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -36,8 +36,8 @@
     }
   },
   "bin": {
-    "agentic-pack": "./dist/cli.js",
-    "agentic-pack-mcp": "./dist/mcp-bin.js"
+    "agentic-listen": "./dist/cli.js",
+    "agentic-listen-mcp": "./dist/mcp-bin.js"
   },
   "scripts": {
     "build": "tsup",
