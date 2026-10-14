@@ -1,8 +1,8 @@
 # Agentic listen
 
-Turn a live audio stream or call recording URL into text as it arrives.
+Agentic listen turns a live stream or call recording URL into text with Deepgram or OpenAI. It does not accept local audio files. Use `agentic-transcribe` for files.
 
-Dry run is the default. Use `--live` to call Deepgram or OpenAI.
+Dry run is the default. It exits successfully and does not call the network.
 
 ## Install
 
@@ -16,23 +16,36 @@ npm install agentic-listen
 npx agentic-listen listen --source https://example.com/call.mp3
 ```
 
-This is a dry run. It does not call a vendor.
+The command previews the request. It does not contact a vendor.
+
+## Live vendors
+
+| Brand | Environment key | Live command |
+| --- | --- | --- |
+| Deepgram | `DEEPGRAM_API_KEY` | `DEEPGRAM_API_KEY=... npx agentic-listen listen --source https://example.com/call.mp3 --vendor deepgram --live` |
+| OpenAI | `OPENAI_API_KEY` | `OPENAI_API_KEY=... npx agentic-listen listen --source https://example.com/call.mp3 --vendor openai --live` |
+
+Use `--live` only when you want the vendor request. Deepgram is the default vendor.
 
 ## Three uses
 
 ### CLI
 
 ```sh
-DEEPGRAM_API_KEY=... npx agentic-listen listen \
-  --source https://example.com/call.mp3 --live
+npx agentic-listen listen --source https://example.com/call.mp3
 ```
+
+Add `--vendor deepgram` or `--vendor openai`. Add `--language en` for Deepgram.
 
 ### Library
 
 ```js
 import { listen } from "agentic-listen";
+
 const result = await listen({ source: "https://example.com/call.mp3" });
 ```
+
+Pass `{ dryRun: false }` and a vendor key to make a live request.
 
 ### MCP
 
@@ -41,9 +54,6 @@ npx agentic-listen mcp
 ```
 
 Call the `listen` tool with `source`. Set `live: true` to call a vendor.
-
-This pack listens to streams and recording URLs. It is not a file
-transcription tool. Use `agentic-transcribe` for files.
 
 ## License
 
