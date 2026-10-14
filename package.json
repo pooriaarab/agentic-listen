@@ -1,15 +1,7 @@
 {
   "name": "agentic-listen",
   "version": "0.1.0",
-  "description": "Return speech text from live audio streams and call recording URLs.",
-  "keywords": [
-    "audio",
-    "speech",
-    "transcription",
-    "deepgram",
-    "openai",
-    "mcp"
-  ],
+  "description": "Preview audio URL transcription and call Deepgram from a TypeScript SDK, CLI, or MCP server; includes an incomplete OpenAI adapter.",
   "license": "MIT",
   "author": "Pooria Arab",
   "repository": {
@@ -54,5 +46,17 @@
     "tsup": "^8.0.0",
     "typescript": "^5.6.0",
     "vitest": "^3.0.0"
-  }
+  },
+  "keywords": [
+    "deepgram",
+    "audio-transcription",
+    "speech-to-text",
+    "recording-url",
+    "call-recording",
+    "typescript",
+    "nodejs",
+    "cli",
+    "mcp",
+    "dry-run"
+  ]
 }
