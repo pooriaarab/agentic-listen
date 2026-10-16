@@ -1,6 +1,6 @@
 {
   "name": "agentic-listen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Turn live streams and call recording URLs into text with Deepgram or OpenAI.",
   "license": "MIT",
   "author": "Pooria Arab",
